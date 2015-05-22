@@ -18,7 +18,7 @@ word2:
 	cmp byte[rbx], 0
 	je end
 	mov al, [rbx]
-	mov [rdi], al
+	mov [rcx], al
 	inc rbx
 	inc rcx
 	jmp word2

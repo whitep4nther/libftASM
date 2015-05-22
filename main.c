@@ -6,7 +6,7 @@
 /*   By: gbadi <gbadi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/03 15:52:38 by gbadi             #+#    #+#             */
-/*   Updated: 2015/05/21 21:30:51 by ihermell         ###   ########.fr       */
+/*   Updated: 2015/05/22 19:33:45 by ihermell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -290,16 +290,6 @@ void		check_strchr(void)
 	printf("///// END STRCHR\n");
 }
 
-void		check_puts_fd(void)
-{
-	printf("[+] PUTS [+]\n");
-	ft_puts_fd("[-] a [-]", 2);
-	ft_puts_fd("[-] $#@#',./,~!@~=+ [-]", 2);
-	printf("[+] Test with null [+]\n");
-	ft_puts_fd(NULL, 2);
-	printf("[+] END OF PUTS [+]\n");
-}
-
 void		check_exit(void)
 {
 	printf("// Test de FT_EXIT (le programme devrait exit(1)) et ne pas afficher LOL\n");
@@ -346,8 +336,6 @@ int			main(void)
 	check_strcmp();
 	printf("\n");
 	check_strchr();
-	printf("\n");
-	check_puts_fd();
 	printf("\n");
 	check_cat();
 	printf("\n");

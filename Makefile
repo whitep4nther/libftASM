@@ -6,7 +6,7 @@
 #    By: ihermell <ihermell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/05/21 17:14:32 by ihermell          #+#    #+#              #
-#    Updated: 2015/05/21 21:31:44 by ihermell         ###   ########.fr        #
+#    Updated: 2015/05/22 19:28:50 by ihermell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRC = ft_bzero.s \
 	  ft_strdup.s \
 	  ft_cat.s \
 	  ft_puts.s \
-	  ft_puts_fd.s \
+	  ft_putchar.s \
 	  ft_isalpha.s \
 	  ft_isdigit.s \
 	  ft_isprint.s \

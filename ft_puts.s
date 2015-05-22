@@ -3,29 +3,37 @@
 %define WRITE				4
 
 section .data
-nl: db 10
+nullStr: db "(null)",0xA
 
 section .text
 	global _ft_puts
 	extern _ft_strlen
+	extern _ft_putchar
 
 _ft_puts:
 	push rbp
 	mov rbp, rsp
 	
-	push rdi
+	cmp rdi, 0
+	je is_null
 	call _ft_strlen
 	mov rsi, rdi
 	mov rdi, STDOUT
 	mov rdx, rax
 	mov rax, MACH_SYSCALL(WRITE)
 	syscall
-	lea rsi, [rel nl]
-	mov rdx, 1
+	mov rdi, 0xA
+	call _ft_putchar
+	jmp end
+
+is_null:
+	lea rsi, [rel nullStr]
+	mov rdi, STDOUT
+	mov rdx, 7
 	mov rax, MACH_SYSCALL(WRITE)
 	syscall
-	pop rdi
 
+end:
 	mov rsp, rbp
 	pop rbp
 	ret
